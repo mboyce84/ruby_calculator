@@ -1,0 +1,3 @@
+This is a simple calculator using Ruby. The command line will prompt for the operation type, two numbers, and then perform the operation and return the results to the screen. The calculator has a method for operator validation. If the user types an incorrect or misspelled, the program will prompt them to re-enter until an accepted value is inputted.
+
+<a href="http://programmingjourney.com">My Programming Journey</a>
