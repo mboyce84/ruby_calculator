@@ -1,5 +1,7 @@
-#This is a simple calculator using Ruby. The command line will prompt for the operation type, two numbers, and then perform the operation and return the results to the screen. The calculator has a method for operator validation. If the user types an incorrect or mispelled 
+#This is a simple calculator using Ruby. The command line will prompt for the operation type, two numbers, and then perform the operation and return the results to the screen. The calculator has a method for operator validation. If the user types an incorrect or misspelled, the program will prompt them to re-enter until an accepted value is inputted.
 
+
+#METHODS BEGIN#
 def operation_validation(operation)
 	if operation == "a"
 		puts "You selected Add."
@@ -38,6 +40,9 @@ def divide(fnum,snum)
 	result = result.to_s
 end
 
+#METHODS END#
+
+#MAIN APPLICATION BEGINS#
 puts "What type of operation would you like to perform? Enter the letter and press Enter."
 puts "Type A' to add"
 puts "Type M to multiply"
@@ -53,15 +58,16 @@ fnum = gets.chomp.to_i
 puts "Enter second number"
 snum = gets.chomp.to_i
 
-if operation == "a"
-	returned_value = add(fnum,snum)
-elsif operation == "s"
-	returned_value = subtract(fnum,snum)
-elsif operation == "m"
-	returned_value = multiply(fnum,snum)
-elsif operation == "d"
-	returned_value = divide(fnum,snum)
-	else
-end
+returned_value = case 
+	when operation == "a"
+		returned_value = add(fnum,snum)
+	when operation == "s"
+		returned_value = subtract(fnum,snum)
+	when operation == "m"
+		returned_value = multiply(fnum,snum)
+	when operation == "d"
+		returned_value = divide(fnum,snum)	
+	end
 
 puts "The result of both numbers is" + " " + returned_value
+#MAIN APPLICATION ENDS#
